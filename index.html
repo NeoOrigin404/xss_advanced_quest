@@ -5,11 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    
+    <!-- Ajout de la CSP (à commenter pour les tests) -->
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self'">
+
     <title>XSS</title>
 
     <link rel="stylesheet" type="text/css" href="vendors/bootstrap.min.css">
     <script type="text/javascript" src="vendors/purify.min.js"></script>
+    <script type="text/javascript" src="main.js" defer></script>
 </head>
 
 <body style="background-image: url(img/united-squares.png); color: #ffffff;">
@@ -48,7 +52,8 @@
                 Anyway, I'm not looking for someone to share pies with... I need someone who can HTML-format my
                 speeches, like making my keywords <strong>bold</strong> and...&nbsp;hum, other modern machine stuff.
                 Could you do that?<br>
-                <strong>You:</strong> Sure!</p>
+                <strong>You:</strong> Sure!
+            </p>
 
             <div class="row">
 
